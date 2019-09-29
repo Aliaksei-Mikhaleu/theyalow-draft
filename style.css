@@ -1,0 +1,46 @@
+
+body {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px; 
+}
+
+.layer20 {
+  height: 566px;
+  width: 1300px;
+  background:  url("assets/Layer20.png") no-repeat;
+  opacity: 1;
+}
+
+.layer7 {
+  height: 212px;
+  width: 1300px;
+  background-position: 0px 566px;
+  background:  url("assets/Layer7.png") no-repeat;
+  opacity: 0.4;  
+}
+
+.layer11 {
+  height: 509px;
+  width: 1300px;
+  background-position: 0px 778px;
+  background:  url("assets/Layer11.png") no-repeat;
+  opacity: 0.23137254901960785;  
+  background-color: #F5CC25;
+}
+
+.layer32 {
+  height: 499px;
+  width: 1300px;
+  background-position: 0px 1286px;
+  background:  url("assets/Layer32.png") no-repeat;
+  opacity: 1;  
+}
+
+.layer31 {
+  height: 64px;
+  width: 1300px;
+  background-position: 0px 1783px;
+  background:  url("assets/Layer31.png") no-repeat;
+  opacity: 1;  
+}
