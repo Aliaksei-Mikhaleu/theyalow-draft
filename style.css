@@ -1,46 +1,157 @@
+/*body {
+  display: grid;
+  grid-template-column: 139px 341px 339px 340px 141px;
+  grid-template-rows: 166px 400px 212px 509px 499px 64px;
+  grid-template-areas:
+    ". logo . nav ."
+    "backbutton video_main . slogan forwardbutton"
+    ". icon1 icon2 icon3 ."
+    ". span_second video_second twitter ."
+    ". content2 content2 content2 ."
+    ". logo2 . . .";
+}
+*/
 
-body {
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 20px; 
+/*.grid {
+  display: grid;
+  grid-autoflow: column;
+  grid-template-columns: 139px 341px 339px 340px 141px;
+  grid-template-rows: 166px 400px 212px 509px 499px 64px;
+  grid-template-areas:
+    ". logo . nav ."
+    "backbutton video_main . slogan forwardbutton"
+    ". icon1 icon2 icon3 ."
+    ". span_second video_second twitter ."
+    ". content2 content2 content2 ."
+    ". logo2 . . .";
+    width: 1300px;
+  */
+
+  /*grid-template:
+    [row1-start] ". logo . nav ." 166px [row1-end]
+    [row2-start] "backbutton video_main . slogan forwardbutton" 166px [row2-end]
+    [row3-start] ". icon1 icon2 icon3 ." 166px [row3-end]
+    [row4-start] ". span_second video_second twitter ." 166px [row4-end]
+    [row5-start] ". content2 content2 content2 ." 166px [row5-end]
+    [row6-start] ". logo2 . . ." 166px [row6-end]
+    / 139px 341px 339px 340px 141px;
+  */
+  .grid {
+    display: grid;
+    grid-template-rows: 566px 1220px 64px;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+    width: 1300px;
 }
 
-.layer20 {
-  height: 566px;
+.header {
+  display: grid;
+  grid-template-columns: 139px 341px 339px 340px 141px;
+  grid-template-rows: 166px 400px;
+  grid-template-areas:
+    ". logo . nav ."
+    "backbutton video_main . slogan forwardbutton";
+  background: url('assets/Layer20.png') no-repeat;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 139px 341px 339px 340px 141px;
+  grid-template-rows: 212px 509px 499px;
+  grid-template-areas:
+    ". icon1 icon2 icon3 ."
+    ". span_second video_second twitter ."
+    ". content2 content2 content2 .";
   width: 1300px;
-  background:  url("assets/Layer20.png") no-repeat;
-  opacity: 1;
+  height: 1220px;
+  background: /*url('assets/Layer7.png') 0px 0px no-repeat,*/
+              url('assets/Layer11.png') left top no-repeat #f5c506,
+              url('assets/Layer32.png') left bottom no-repeat;
 }
 
-.layer7 {
-  height: 212px;
-  width: 1300px;
-  background-position: 0px 566px;
-  background:  url("assets/Layer7.png") no-repeat;
-  opacity: 0.4;  
+.footer {
+  display: grid;
+  grid-template-columns: 139px 341px 339px 340px 141px;
+  grid-template-rows: 64px;
+  grid-template-areas:
+    ". logo2 . . .";
+  background: url('assets/Layer31.png') no-repeat;
 }
 
-.layer11 {
-  height: 509px;
-  width: 1300px;
-  background-position: 0px 778px;
-  background:  url("assets/Layer11.png") no-repeat;
-  opacity: 0.23137254901960785;  
-  background-color: #F5CC25;
+.logo {
+  grid-area: logo; 
 }
 
-.layer32 {
-  height: 499px;
-  width: 1300px;
-  background-position: 0px 1286px;
-  background:  url("assets/Layer32.png") no-repeat;
-  opacity: 1;  
+.nav {
+  grid-area: nav;
 }
 
-.layer31 {
-  height: 64px;
-  width: 1300px;
-  background-position: 0px 1783px;
-  background:  url("assets/Layer31.png") no-repeat;
-  opacity: 1;  
+.video_main {
+  grid-area: video_main;
+  width: 529px;
+  height: 327px;  
 }
+
+.slogan {
+  grid-area: slogan;
+  width: 392px;
+  height: 121px;
+}
+
+.backbutton {
+  grid-area: backbutton;
+}
+
+.forwardbutton {
+  grid-area: forwardbutton;
+}
+
+.icon1 {
+  grid-area: icon1;
+}
+
+.icon2 {
+  grid-area: icon2;
+}
+
+.icon3 {
+  grid-area: icon3;
+}
+
+.span_second {
+  grid-area: span_second;
+}
+
+.video_second {
+  grid-area: video_second;
+}
+
+.twitter {
+  grid-area: twitter;
+}
+
+.content2 {
+  grid-area: content2;
+}
+
+.logo2 {
+  grid-area: logo2;
+}
+
+.header > div, .main > div, .footer > div {
+  background: #fef8ec;
+  border: 1px solid #000000;
+}
+
+/*@media(max-width: 640px) {
+  grid {
+    grid-template-column: 1fr;
+    grid-template-areas:
+    "header"
+    "content"
+    "footer"
+  }
+}
+*/
